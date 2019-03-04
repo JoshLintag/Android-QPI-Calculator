@@ -76,5 +76,17 @@
   --ion-color-light-tint: #f5f6f9;
 
   --ion-background-color: #ffffff;
-  --ion-tab-bar-background: #a40a0a;
+  --ion-tab-bar-background: #222428;
+
+  /** custom colors **/
+
+
+  .ion-color-white {
+    --ion-color-base: #ffffff;
+    --ion-color-base-rgb: 255,255,255;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade: #ffffff;
+    --ion-color-tint: #ffffff;
+  }
 }
