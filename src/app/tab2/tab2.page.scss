@@ -3,8 +3,8 @@ ion-content{
 }
 
 .circlebutton{
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
     font-weight:bold;
 }
 
@@ -21,9 +21,23 @@ ion-toolbar{
     --background: #222428;
     --color: white;
 }
+.titleFont {
+    font-size: 4em;
+    margin-left: 5%;
+    font-family: 'Fjalla One';
+  
+}
 .subtitleFont{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Josefine';
     text-align: center;
-    font-size: 1em;
-  }
+    font-size: 2em;
+}
 
+ion-grid{
+    --ion-grid-column-padding:        2px;
+    --ion-grid-column-padding-xs:     2px;
+    --ion-grid-column-padding-sm:     2px;
+    --ion-grid-column-padding-md:     2px;
+    --ion-grid-column-padding-lg:     2px;
+    --ion-grid-column-padding-xl:     2px;
+}

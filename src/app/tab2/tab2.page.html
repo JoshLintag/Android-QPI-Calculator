@@ -13,10 +13,12 @@
 
 
 <div style="padding-top:15px;">
-    <ion-label color="white" style="margin-left: 5%;">Tap the Grades</ion-label>
     <ion-item style="padding-top: 15px;">
         <ion-label disabled text-center color="white" style="display:inline;font-size: 6em;">{{ all | number : '1.2-2'}}</ion-label>
     </ion-item>
+    <div style="padding-top: 10px;margin-left: 10px;margin-right: 10px;text-align: left;">
+        <ion-label color="white">Grades: {{tally}} </ion-label>
+    </div>
 </div>
 
 
@@ -24,36 +26,42 @@
 
 
 <div style="padding-top:15px;padding-bottom: 15px;margin-left: auto;text-align: center;">
-  <ion-grid >
-    <ion-row >
+  <ion-grid>
+    <ion-row wrap>
+        <ion-col></ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonA)" >A</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonA);btnTally(AText)" >A</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonBplus)">B+</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonBplus);btnTally(BplusText)">B+</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonB)">B</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonB);btnTally(BText)">B</ion-button>
         </ion-col>
+        <ion-col></ion-col>
     </ion-row>
     <ion-row >
+        <ion-col></ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonCplus)">C+</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonCplus);btnTally(CplusText)">C+</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonC)">C</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonC);btnTally(CText)">C</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonD)">D</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonD);btnTally(DText)">D</ion-button>
         </ion-col>
+        <ion-col></ion-col>
     </ion-row>
     <ion-row >
+        <ion-col></ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonF)">F/FD</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonF);btnTally(FText)">F/FD</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="danger" class="circlebutton"(click)="btnclear()">CLR</ion-button>
+            <ion-button shape="round" color="danger" class="circlebutton"(click)="btnclear($event)">CLR</ion-button>
         </ion-col>
+        <ion-col></ion-col>
     </ion-row>
   </ion-grid>
 
@@ -71,7 +79,3 @@
 </ion-content>
 
 <script src="assets/scripts/jquery-3.3.1.min.js"></script>
-<script>
-
-
-</script>

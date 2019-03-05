@@ -22,6 +22,14 @@ export class Tab2Page {
   public rawQPI: number = 0;
 
 
+  public AText: String = "A";
+  public BplusText: String = "B+";
+  public BText: String = "B";
+  public CplusText: String = "C+";
+  public CText: String = "C";
+  public DText: String = "D";
+  public FText: String = "F";
+  public tally: String;
   constructor(public navCtrl: NavController) {
    // this.buttonA = 99;
   }
@@ -32,7 +40,7 @@ export class Tab2Page {
     this.rawQPI = this.rawQPI + name;
     console.log("raw qpi is: " + this.rawQPI);
     this.all = this.rawQPI;
-
+    
     this.totalSubject = this.totalSubject + 1;
     this.all = this.all / this.totalSubject;
 
@@ -47,7 +55,21 @@ export class Tab2Page {
     this.all=0;
     this.totalSubject=0;
     this.rawQPI = 0;
+    this.tally = undefined;
+  }
 
+
+  btnTally(name:String){
+    if(this.tally == undefined){
+      this.tally = name;
+      // console.log("GRADE TALLY: " + this.tally);
+    }
+    else{
+      this.tally = this.tally + " , " + name 
+      // console.log("GRADE TALLY: " + this.tally);
+    }
+    
+    
   }
   value:string;
 
