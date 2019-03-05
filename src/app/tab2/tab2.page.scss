@@ -1,10 +1,11 @@
 ion-content{
-    --ion-background-color:#353535;
+    --ion-background-color:#222222;
 }
 
 .circlebutton{
     width:100px;
     height:100px;
+    font-weight:bold;
 }
 
 .whiteText{
@@ -25,3 +26,4 @@ ion-toolbar{
     text-align: center;
     font-size: 1em;
   }
+

@@ -13,13 +13,10 @@
 
 
 <div style="padding-top:15px;">
-    <ion-label color="white" style="text-align: center;margin-left: 5%;">Enter Grade</ion-label>
+    <ion-label color="white" style="margin-left: 5%;">Tap the Grades</ion-label>
     <ion-item style="padding-top: 15px;">
-        <ion-textarea disabled color="white" style="font-size: 2em;margin-left: 20%;">{{ all }}</ion-textarea>
-        
+        <ion-label disabled text-center color="white" style="display:inline;font-size: 6em;">{{ all | number : '1.2-2'}}</ion-label>
     </ion-item>
-    
-    
 </div>
 
 
@@ -55,10 +52,7 @@
             <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonF)">F/FD</ion-button>
         </ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton">clr</ion-button>
-        </ion-col>
-        <ion-col>
-            <ion-button shape="round" color="danger" class="circlebutton">=</ion-button>
+            <ion-button shape="round" color="danger" class="circlebutton"(click)="btnclear()">CLR</ion-button>
         </ion-col>
     </ion-row>
   </ion-grid>

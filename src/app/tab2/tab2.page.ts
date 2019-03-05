@@ -18,22 +18,35 @@ export class Tab2Page {
   public buttonD: number = 1;
   public buttonF: number = 0;
   public all: number = 0;
-  public unitCount: number = 0;
-
+  public totalSubject: number = 0;
+  public rawQPI: number = 0;
 
 
   constructor(public navCtrl: NavController) {
    // this.buttonA = 99;
   }
-  btnclicked(name){
-    console.log(name);
+  btnclicked(name:number){
+    //console.log(name);
 
     //qpi calculation
-    this.unitCount = this.unitCount + 3;
-    this.all = ((this.all + name) * 3) / this.unitCount;
+    this.rawQPI = this.rawQPI + name;
+    console.log("raw qpi is: " + this.rawQPI);
+    this.all = this.rawQPI;
+
+    this.totalSubject = this.totalSubject + 1;
+    this.all = this.all / this.totalSubject;
+
+    console.log("Total qpi: " + this.all);
+    console.log("Total subject: " + this.totalSubject);
+    //console.log("total qpi= " + this.all);
+
+  }
 
 
-    console.log("total qpi= " + this.all);
+  btnclear(event:any){
+    this.all=0;
+    this.totalSubject=0;
+    this.rawQPI = 0;
 
   }
   value:string;

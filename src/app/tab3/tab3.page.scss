@@ -1,6 +1,7 @@
 
 ion-content{
-    --ion-background-color:#353535;
+    --ion-background-color:#ffffff;
+    --color: black;
 }
 
 ion-item{
@@ -23,9 +24,37 @@ ion-card-content{
 
 }
 
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
   }
+
+  .titleFont {
+    font-size: 2em;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+  
+  }
+  .subtitleFont{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 10px;
+  }
+  
+  .circlebutton{
+    width:100px;
+    height:100px;
+    font-weight:bold;
+}
+ion-icon {
+    font-size: 128px;
+    color:white;
+  }
+  /*Fonts*/
+  //font-family: 'Nunito', sans-serif;
+  //font-family: 'Fjalla One', sans-serif;
+  //font-family: 'Josefin Sans', sans-serif;
