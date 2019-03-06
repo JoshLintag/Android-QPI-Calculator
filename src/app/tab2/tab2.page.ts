@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { variable } from '@angular/compiler/src/output/output_ast';
+import { PopoverController } from '@ionic/angular';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { variable } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+
+
   
   public buttonA: number = 4;
   public buttonBplus: number = 3.5;
@@ -30,9 +33,7 @@ export class Tab2Page {
   public DText: String = "D";
   public FText: String = "F";
   public tally: String;
-  constructor(public navCtrl: NavController) {
-   // this.buttonA = 99;
-  }
+ 
   btnclicked(name:number){
     //console.log(name);
 
@@ -47,6 +48,10 @@ export class Tab2Page {
     console.log("Total qpi: " + this.all);
     console.log("Total subject: " + this.totalSubject);
     //console.log("total qpi= " + this.all);
+    
+    if(this.all < 1.00){
+      alert("GG ORBSKIE");
+    }
 
   }
 
@@ -73,6 +78,14 @@ export class Tab2Page {
   }
   value:string;
 
+  btnpress(event:any){
+    alert("you are holding this button");
+  }
+
+
+
+    
+  
 
   
 }

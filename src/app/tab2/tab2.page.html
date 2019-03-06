@@ -30,7 +30,7 @@
     <ion-row wrap>
         <ion-col></ion-col>
         <ion-col>
-            <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonA);btnTally(AText)" >A</ion-button>
+            <ion-button shape="round" color="light" class="circlebutton" (press)="btnpress($event)"(click)="btnclicked(buttonA);btnTally(AText)" >A</ion-button>
         </ion-col>
         <ion-col>
             <ion-button shape="round" color="light" class="circlebutton" (click)="btnclicked(buttonBplus);btnTally(BplusText)">B+</ion-button>
